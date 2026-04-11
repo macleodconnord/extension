@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @plugin "daisyui" {
-  themes: light;
-  root: "*";
-  logs: false;
+	themes: light;
+	root: '*';
+	logs: false;
 }

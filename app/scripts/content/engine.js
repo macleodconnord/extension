@@ -7,65 +7,65 @@ const FONT_ID = 'opendyslexic-font-styles';
 const BODY_CLASS_PREFIX = 'opendyslexic-font-';
 
 function injectCssInline(id, cssString) {
-  let styleTag = document.getElementById(id);
-  if (!styleTag) {
-    styleTag = document.createElement('style');
-    styleTag.id = id;
-    document.head.appendChild(styleTag);
-  }
-  styleTag.textContent = cssString;
+	let styleTag = document.getElementById(id);
+	if (!styleTag) {
+		styleTag = document.createElement('style');
+		styleTag.id = id;
+		document.head.appendChild(styleTag);
+	}
+	styleTag.textContent = cssString;
 }
 
 function removeStyleTag(id) {
-  const elem = document.getElementById(id);
-  if (elem) {
-    elem.remove();
-  }
+	const elem = document.getElementById(id);
+	if (elem) {
+		elem.remove();
+	}
 }
 
 function removeBodyClasses() {
-  Array.from(document.body.classList)
-    .filter((className) => className.startsWith(BODY_CLASS_PREFIX))
-    .forEach((className) => document.body.classList.remove(className));
+	Array.from(document.body.classList)
+		.filter((className) => className.startsWith(BODY_CLASS_PREFIX))
+		.forEach((className) => document.body.classList.remove(className));
 }
 
 function applyFont(fontName) {
-  removeStyleTag(FONT_ID);
+	removeStyleTag(FONT_ID);
 
-  const protocol = chrome.runtime.getURL('');
-  const cssString = opendyslexic
-    .toString()
-    .replace(/{{\$browser_extension_protocol}}/g, protocol);
+	const protocol = chrome.runtime.getURL('');
+	const cssString = opendyslexic
+		.toString()
+		.replace(/{{\$browser_extension_protocol}}/g, protocol);
 
-  injectCssInline(FONT_ID, cssString);
-  removeBodyClasses();
+	injectCssInline(FONT_ID, cssString);
+	removeBodyClasses();
 
-  const className = BODY_CLASS_PREFIX + fontName.toLowerCase();
-  document.body.classList.add(className);
+	const className = BODY_CLASS_PREFIX + fontName.toLowerCase();
+	document.body.classList.add(className);
 }
 
 function removeFont() {
-  removeStyleTag(FONT_ID);
-  removeBodyClasses();
+	removeStyleTag(FONT_ID);
+	removeBodyClasses();
 }
 
 function updateFontMode(mode, font) {
-  enabled = mode;
-  currentFont = font || 'regular';
+	enabled = mode;
+	currentFont = font || 'regular';
 
-  if (enabled) {
-    applyFont(currentFont);
-  } else {
-    removeFont();
-  }
+	if (enabled) {
+		applyFont(currentFont);
+	} else {
+		removeFont();
+	}
 }
 
 chrome.storage.local.get(['enabled', 'font'], (data) => {
-  updateFontMode(data.enabled || false, data.font || 'regular');
+	updateFontMode(data.enabled || false, data.font || 'regular');
 });
 
 chrome.runtime.onMessage.addListener((message) => {
-  if (message.type === 'openDyslexicIsOn' || message.type === 'updateFont') {
-    updateFontMode(message.enabled || false, message.font || 'regular');
-  }
+	if (message.type === 'openDyslexicIsOn' || message.type === 'updateFont') {
+		updateFontMode(message.enabled || false, message.font || 'regular');
+	}
 });
