@@ -1,28 +1,36 @@
-export function update(mail) {
-	console.log('ddd', mail);
-	if (mail.state === true) {
-		on();
-		return mail.state;
-	}
+const BADGE_COLOR_ON = '#34c759';
+const BADGE_COLOR_OFF = '#ff3c2f';
 
-	off();
-	return mail.state;
+export function update({ state }) {
+  if (state) {
+    on();
+  } else {
+    off();
+  }
 }
 
 export function off() {
-	setColor('#ff3c2f');
-	setText('off');
+  setColor(BADGE_COLOR_OFF);
+  setText('off');
 }
 
 export function on() {
-	setColor('#34c759');
-	setText('on');
+  setColor(BADGE_COLOR_ON);
+  setText('on');
 }
 
 function setColor(color) {
-	chrome.action.setBadgeBackgroundColor({ color: color }, () => {});
+  chrome.action.setBadgeBackgroundColor({ color }, () => {
+    if (chrome.runtime.lastError) {
+      console.error('Badge color error:', chrome.runtime.lastError.message);
+    }
+  });
 }
 
 function setText(text) {
-	chrome.action.setBadgeText({ text: text }, () => {});
+  chrome.action.setBadgeText({ text }, () => {
+    if (chrome.runtime.lastError) {
+      console.error('Badge text error:', chrome.runtime.lastError.message);
+    }
+  });
 }

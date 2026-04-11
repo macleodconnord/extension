@@ -1,46 +1,43 @@
 @font-face {
-	font-family: 'opendyslexic';
-	src: url('/assets/fonts/opendyslexic/regular.otf');
-	font-style: normal;
-	font-weight: normal;
+  font-family: 'opendyslexic';
+  src: url('/assets/fonts/opendyslexic/regular.otf');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: 'opendyslexic';
-	src: url('/assets/fonts/opendyslexic/italic.otf');
-	font-style: italic;
-	font-weight: normal;
+  font-family: 'opendyslexic';
+  src: url('/assets/fonts/opendyslexic/italic.otf');
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: 'opendyslexic';
-	src: url('/assets/fonts/opendyslexic/bold.otf');
-	font-weight: bold;
-	font-style: normal;
+  font-family: 'opendyslexic';
+  src: url('/assets/fonts/opendyslexic/bold.otf');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'opendyslexic';
-	src: url('/assets/fonts/opendyslexic/bold-italic.otf');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'opendyslexicmono';
-	src: url('/assets/fonts/opendyslexic/regular.otf');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'opendyslexic';
+  src: url('/assets/fonts/opendyslexic/bold-italic.otf');
+  font-display: swap;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .viewport,
 body {
-	width: 290px;
-	height: 530px;
-	font-family: 'opendyslexic';
-	background-color: #55b685;
+  width: 290px;
+  height: 530px;
+  font-family: 'opendyslexic', Arial, sans-serif;
+  background-color: #55b685;
 }
 
 .background-color-od {
-	background-color: #55b685;
+  background-color: #55b685;
 }
