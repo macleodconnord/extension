@@ -55,7 +55,7 @@ body.opendyslexic-font-regular
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -102,7 +102,7 @@ body.opendyslexic-font-italic
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -149,7 +149,7 @@ body.opendyslexic-font-bold
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -299,7 +299,7 @@ body.helperbird-reading-lora-regular
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -340,7 +340,7 @@ body.helperbird-reading-lora
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -386,7 +386,7 @@ body.helperbird-reading-lora-italic
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -432,7 +432,7 @@ body.helperbird-reading-lora-bold
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -478,7 +478,7 @@ body.helperbird-reading-opendyslexic
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -525,7 +525,7 @@ body.helperbird-reading-opendyslexic-italic
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
@@ -571,7 +571,7 @@ body.helperbird-reading-opendyslexic-bold
 		:where(
 				svg,
 				svg *,
-				[class*='fa-'],
+				[class*='fui-'],[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
