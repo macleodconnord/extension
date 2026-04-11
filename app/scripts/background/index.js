@@ -30,13 +30,11 @@ chrome.storage.onChanged.addListener(async (changes, areaName) => {
 });
 
 function sendToAllTabs(message) {
-	try {
-		chrome.tabs.query({}, (tabs) => {
-			tabs.forEach((tab) => {
-				chrome.tabs.sendMessage(tab.id, message);
-			});
+	chrome.tabs.query({}, (tabs) => {
+		tabs.forEach((tab) => {
+			chrome.tabs.sendMessage(tab.id, message).catch(() => {});
 		});
-	} catch (error) {}
+	});
 }
 
 async function getStorage(key) {
@@ -56,15 +54,12 @@ async function getStorage(key) {
 			data.item = result[key];
 		}
 	} catch (err) {
-		return data;
+		console.error('Failed to get storage:', key, err);
 	}
 
 	return data;
 }
 
-/**
- * Load initial settings from storage.
- */
 chrome.storage.local.get(['enabled'], (data) => {
 	update({ state: data.enabled || false });
 });

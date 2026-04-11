@@ -14,11 +14,8 @@ app.use(Toaster, {
 	maxToasts: 1,
 	duration: 3000,
 	style: {
-		'background': '',
 		'border-radius': '30px'
 	}
 });
-
-app.config.productionTip = true;
 
 app.mount('#app');
