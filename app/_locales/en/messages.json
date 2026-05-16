@@ -146,6 +146,20 @@
 	"saved": {
 		"message": "Settings Applied"
 	},
+	"toggleExtension": {
+		"message": "Toggle OpenDyslexic",
+		"description": "Aria-label for the master enable/disable toggle in the popup"
+	},
+	"change_font_to_x": {
+		"message": "Change font to $FONT$",
+		"description": "Aria-label and tooltip for each font selector button. $FONT$ is the human-readable font title.",
+		"placeholders": {
+			"font": {
+				"content": "$1",
+				"example": "OpenDyslexic Bold"
+			}
+		}
+	},
 	"helperbird": {
 		"message": "Discover Helperbird"
 	},

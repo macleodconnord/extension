@@ -159,7 +159,7 @@ var run = function (
 						} else {
 							fs.mkdir(path, function (err) {
 								if (err) {
-									console.warn('🦉 Helperbird error', error);
+									console.warn('🦉 Helperbird error', err);
 								} else {
 									console.log(
 										'New directory successfully created.'

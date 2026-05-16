@@ -7,6 +7,16 @@
 }
 
 @font-face {
+	font-family: 'OpenDyslexic Bold Italic';
+	src: url('{{$browser_extension_protocol}}assets/fonts/opendyslexic/bold-italic.otf')
+		format('opentype');
+	font-display: swap;
+	font-style: italic;
+	font-weight: 700;
+	unicode-range: U+0000-024F, U+0300-036F, U+02B0-02FF, U+03C0, U+1E00-1EFF,
+		U+2000-206F, U+20AC, U+2122-2126, U+2200-22FF, U+25CA, U+FB01-FB02;
+}
+@font-face {
 	font-family: 'OpenDyslexic';
 	src: url('{{$browser_extension_protocol}}assets/fonts/opendyslexic/regular.otf')
 		format('opentype');
@@ -39,28 +49,14 @@
 		U+2000-206F, U+20AC, U+2122-2126, U+2200-22FF, U+25CA, U+FB01-FB02;
 }
 
-@font-face {
-	font-family: 'OpenDyslexic Bold Italic';
-	src: url('{{$browser_extension_protocol}}assets/fonts/opendyslexic/bold-italic.otf')
-		format('opentype');
-	font-display: swap;
-	font-style: italic;
-	font-weight: 700;
-	unicode-range: U+0000-024F, U+0300-036F, U+02B0-02FF, U+03C0, U+1E00-1EFF,
-		U+2000-206F, U+20AC, U+2122-2126, U+2200-22FF, U+25CA, U+FB01-FB02;
-}
-
 body.opendyslexic-font-regular
 	*:not(
 		:where(
 				svg,
 				svg *,
-				[class*='fui-'],[class*='fa-'],
+				[class*='fui-'],
+				[class*='fa-'],
 				[class*='fa-'] *,
-				[class*='google-material'] *,
-						[class*='google-material-'] *,
-				[class*='google-material-icons'] *,
-				[class*='material-icons'] *,
 				[class~='fa'],
 				[class~='fa'] *,
 				[class~='fas'],
@@ -77,6 +73,14 @@ body.opendyslexic-font-regular
 				[class~='material-icons'] *,
 				[class*='material-symbols'],
 				[class*='material-symbols'] *,
+				[class*='google-material'],
+				[class*='google-material'] *,
+				[class~='google-material'],
+				[class~='google-material'] *,
+				[class*='google-material-icons'],
+				[class*='google-material-icons'] *,
+				[class~='google-material-icons'],
+				[class~='google-material-icons'] *,
 				[class*='glyphicon'],
 				[class*='glyphicon'] *,
 				[class*='bi-'],
@@ -106,12 +110,9 @@ body.opendyslexic-font-italic
 		:where(
 				svg,
 				svg *,
-				[class*='fui-'],[class*='fa-'],
+				[class*='fui-'],
+				[class*='fa-'],
 				[class*='fa-'] *,
-							[class*='google-material'] *,
-						[class*='google-material-'] *,
-				[class*='google-material-icons'] *,
-				[class*='material-icons'] *,
 				[class~='fa'],
 				[class~='fa'] *,
 				[class~='fas'],
@@ -128,6 +129,14 @@ body.opendyslexic-font-italic
 				[class~='material-icons'] *,
 				[class*='material-symbols'],
 				[class*='material-symbols'] *,
+				[class*='google-material'],
+				[class*='google-material'] *,
+				[class~='google-material'],
+				[class~='google-material'] *,
+				[class*='google-material-icons'],
+				[class*='google-material-icons'] *,
+				[class~='google-material-icons'],
+				[class~='google-material-icons'] *,
 				[class*='glyphicon'],
 				[class*='glyphicon'] *,
 				[class*='bi-'],
@@ -157,14 +166,11 @@ body.opendyslexic-font-bold
 		:where(
 				svg,
 				svg *,
-				[class*='fui-'],[class*='fa-'],
+				[class*='fui-'],
+				[class*='fa-'],
 				[class*='fa-'] *,
 				[class~='fa'],
 				[class~='fa'] *,
-							[class*='google-material'] *,
-						[class*='google-material-'] *,
-				[class*='google-material-icons'] *,
-				[class*='material-icons'] *,
 				[class~='fas'],
 				[class~='fas'] *,
 				[class~='far'],
@@ -179,6 +185,14 @@ body.opendyslexic-font-bold
 				[class~='material-icons'] *,
 				[class*='material-symbols'],
 				[class*='material-symbols'] *,
+				[class*='google-material'],
+				[class*='google-material'] *,
+				[class~='google-material'],
+				[class~='google-material'] *,
+				[class*='google-material-icons'],
+				[class*='google-material-icons'] *,
+				[class~='google-material-icons'],
+				[class~='google-material-icons'] *,
 				[class*='glyphicon'],
 				[class*='glyphicon'] *,
 				[class*='bi-'],
@@ -214,432 +228,4 @@ body.opendyslexic-font-italic strong {
 body.opendyslexic-font-bold b,
 body.opendyslexic-font-bold strong {
 	font-weight: 900 !important;
-}
-
-@font-face {
-	font-family: 'Lexend Deca';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lexend/lexend-deca.woff2')
-		format('woff2');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Lexend Exa';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lexend/lexend-exa.woff2')
-		format('woff2');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Lexend Giga';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lexend/lexend-giga.woff2')
-		format('woff2');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: 'Lexend Mega';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lexend/lexend-mega.woff2')
-		format('woff2');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: 'Lexend Meta';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lexend/lexend-meta.woff2')
-		format('woff2');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Lexend Peta';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lexend/lexend-peta.woff2')
-		format('woff2');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Lexend Zetta';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lexend/lexend-zetta.woff2')
-		format('woff2');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Lora';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lora/regular.otf')
-		format('opentype');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Lora Italic';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lora/italic.otf')
-		format('opentype');
-	font-display: swap;
-	font-style: italic;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Lora Bold';
-	src: url('{{$browser_extension_protocol}}assets/fonts/lora/bold.otf')
-		format('opentype');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 700;
-}
-
-body.helperbird-reading-lora-regular
-	*:not(
-		:where(
-				svg,
-				svg *,
-				[class*='fui-'],[class*='fa-'],
-				[class*='fa-'] *,
-				[class~='fa'],
-				[class~='fa'] *,
-							[class*='google-material'] *,
-						[class*='google-material-'] *,
-				[class*='google-material-icons'] *,
-				[class*='material-icons'] *,
-				[class~='fas'],
-				[class~='fas'] *,
-				[class~='far'],
-				[class~='far'] *,
-				[class~='fab'],
-				[class~='fab'] *,
-				[class~='fal'],
-				[class~='fal'] *,
-				[class~='fad'],
-				[class~='fad'] *,
-				[class~='material-icons'],
-				[class~='material-icons'] *,
-				[class*='material-symbols'],
-				[class*='material-symbols'] *,
-				[class*='glyphicon'],
-				[class*='glyphicon'] *,
-				[class*='bi-'],
-				[class*='bi-'] *,
-				[class*='icon-'],
-				[class*='icon-'] *,
-				[class$='-icon'],
-				[class$='-icon'] *,
-				[class*='ph-'],
-				[class*='ph-'] *,
-				[class*='ti-'],
-				[class*='ti-'] *,
-				[class*='ri-'],
-				[class*='ri-'] *,
-				[class*='icomoon'],
-				[class*='icomoon'] *
-			)
-	),
-body.helperbird-reading-lora
-	*:not(
-		:where(
-				svg,
-				svg *,
-				[class*='fui-'],[class*='fa-'],
-				[class*='fa-'] *,
-				[class~='fa'],
-				[class~='fa'] *,
-				[class~='fas'],
-				[class~='fas'] *,
-				[class~='far'],
-				[class~='far'] *,
-				[class~='fab'],
-				[class~='fab'] *,
-				[class~='fal'],
-				[class~='fal'] *,
-				[class~='fad'],
-				[class~='fad'] *,
-				[class~='material-icons'],
-				[class~='material-icons'] *,
-				[class*='material-symbols'],
-				[class*='material-symbols'] *,
-				[class*='glyphicon'],
-				[class*='glyphicon'] *,
-				[class*='bi-'],
-				[class*='bi-'] *,
-				[class*='icon-'],
-				[class*='icon-'] *,
-				[class$='-icon'],
-				[class$='-icon'] *,
-				[class*='ph-'],
-				[class*='ph-'] *,
-				[class*='ti-'],
-				[class*='ti-'] *,
-				[class*='ri-'],
-				[class*='ri-'] *,
-				[class*='icomoon'],
-				[class*='icomoon'] *
-			)
-	) {
-	font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
-	font-weight: 400;
-	font-style: normal;
-}
-
-body.helperbird-reading-lora-italic
-	*:not(
-		:where(
-				svg,
-				svg *,
-				[class*='fui-'],[class*='fa-'],
-				[class*='fa-'] *,
-				[class~='fa'],
-				[class~='fa'] *,
-						[class*='google-material'] *,
-						[class*='google-material-'] *,
-				[class*='google-material-icons'] *,
-				[class*='material-icons'] *,
-				[class~='fas'],
-				[class~='fas'] *,
-				[class~='far'],
-				[class~='far'] *,
-				[class~='fab'],
-				[class~='fab'] *,
-				[class~='fal'],
-				[class~='fal'] *,
-				[class~='fad'],
-				[class~='fad'] *,
-				[class~='material-icons'],
-				[class~='material-icons'] *,
-				[class*='material-symbols'],
-				[class*='material-symbols'] *,
-				[class*='glyphicon'],
-				[class*='glyphicon'] *,
-				[class*='bi-'],
-				[class*='bi-'] *,
-				[class*='icon-'],
-				[class*='icon-'] *,
-				[class$='-icon'],
-				[class$='-icon'] *,
-				[class*='ph-'],
-				[class*='ph-'] *,
-				[class*='ti-'],
-				[class*='ti-'] *,
-				[class*='ri-'],
-				[class*='ri-'] *,
-				[class*='icomoon'],
-				[class*='icomoon'] *
-			)
-	) {
-	font-family: 'Lora Italic', Georgia, 'Times New Roman', serif !important;
-	font-style: italic;
-	font-weight: 400;
-}
-
-body.helperbird-reading-lora-bold
-	*:not(
-		:where(
-				svg,
-				svg *,
-				[class*='fui-'],[class*='fa-'],
-				[class*='fa-'] *,
-				[class~='fa'],
-				[class~='fa'] *,
-				[class~='fas'],
-				[class~='fas'] *,
-				[class~='far'],
-				[class~='far'] *,
-				[class~='fab'],
-				[class~='fab'] *,
-				[class~='fal'],
-				[class~='fal'] *,
-				[class~='fad'],
-				[class~='fad'] *,
-				[class~='material-icons'],
-				[class~='material-icons'] *,
-				[class*='material-symbols'],
-				[class*='material-symbols'] *,
-				[class*='glyphicon'],
-				[class*='glyphicon'] *,
-				[class*='bi-'],
-				[class*='bi-'] *,
-				[class*='icon-'],
-				[class*='icon-'] *,
-				[class$='-icon'],
-				[class$='-icon'] *,
-				[class*='ph-'],
-				[class*='ph-'] *,
-				[class*='ti-'],
-				[class*='ti-'] *,
-				[class*='ri-'],
-				[class*='ri-'] *,
-				[class*='icomoon'],
-				[class*='icomoon'] *
-			)
-	) {
-	font-family: 'Lora Bold', Georgia, 'Times New Roman', serif !important;
-	font-style: normal;
-	font-weight: 700;
-}
-
-body.helperbird-reading-opendyslexic
-	*:not(
-		:where(
-				svg,
-				svg *,
-				[class*='fui-'],[class*='fa-'],
-				[class*='fa-'] *,
-				[class~='fa'],
-				[class~='fa'] *,
-						[class*='google-material'] *,
-						[class*='google-material-'] *,
-				[class*='google-material-icons'] *,
-				[class*='material-icons'] *,
-				[class~='fas'],
-				[class~='fas'] *,
-				[class~='far'],
-				[class~='far'] *,
-				[class~='fab'],
-				[class~='fab'] *,
-				[class~='fal'],
-				[class~='fal'] *,
-				[class~='fad'],
-				[class~='fad'] *,
-				[class~='material-icons'],
-				[class~='material-icons'] *,
-				[class*='material-symbols'],
-				[class*='material-symbols'] *,
-				[class*='glyphicon'],
-				[class*='glyphicon'] *,
-				[class*='bi-'],
-				[class*='bi-'] *,
-				[class*='icon-'],
-				[class*='icon-'] *,
-				[class$='-icon'],
-				[class$='-icon'] *,
-				[class*='ph-'],
-				[class*='ph-'] *,
-				[class*='ti-'],
-				[class*='ti-'] *,
-				[class*='ri-'],
-				[class*='ri-'] *,
-				[class*='icomoon'],
-				[class*='icomoon'] *
-			)
-	) {
-	font-family: var(--opendyslexic-regular), Arial, sans-serif !important;
-	font-weight: 400;
-	font-style: normal;
-	line-height: 1.5;
-}
-
-body.helperbird-reading-opendyslexic-italic
-	*:not(
-		:where(
-				svg,
-				svg *,
-				[class*='fui-'],[class*='fa-'],
-				[class*='fa-'] *,
-				[class~='fa'],
-				[class~='fa'] *,
-						[class*='google-material'] *,
-						[class*='google-material-'] *,
-				[class*='google-material-icons'] *,
-				[class*='material-icons'] *,
-				[class~='fas'],
-				[class~='fas'] *,
-				[class~='far'],
-				[class~='far'] *,
-				[class~='fab'],
-				[class~='fab'] *,
-				[class~='fal'],
-				[class~='fal'] *,
-				[class~='fad'],
-				[class~='fad'] *,
-				[class~='material-icons'],
-				[class~='material-icons'] *,
-				[class*='material-symbols'],
-				[class*='material-symbols'] *,
-				[class*='glyphicon'],
-				[class*='glyphicon'] *,
-				[class*='bi-'],
-				[class*='bi-'] *,
-				[class*='icon-'],
-				[class*='icon-'] *,
-				[class$='-icon'],
-				[class$='-icon'] *,
-				[class*='ph-'],
-				[class*='ph-'] *,
-				[class*='ti-'],
-				[class*='ti-'] *,
-				[class*='ri-'],
-				[class*='ri-'] *,
-				[class*='icomoon'],
-				[class*='icomoon'] *
-			)
-	) {
-	font-family: var(--opendyslexic-italic), Arial, sans-serif !important;
-	font-style: italic;
-	line-height: 1.5;
-}
-
-body.helperbird-reading-opendyslexic-bold
-	*:not(
-		:where(
-				svg,
-				svg *,
-				[class*='fui-'],[class*='fa-'],
-				[class*='fa-'] *,
-				[class~='fa'],
-				[class~='fa'] *,
-						[class*='google-material'] *,
-						[class*='google-material-'] *,
-				[class*='google-material-icons'] *,
-				[class*='material-icons'] *,
-				[class~='fas'],
-				[class~='fas'] *,
-				[class~='far'],
-				[class~='far'] *,
-				[class~='fab'],
-				[class~='fab'] *,
-				[class~='fal'],
-				[class~='fal'] *,
-				[class~='fad'],
-				[class~='fad'] *,
-				[class~='material-icons'],
-				[class~='material-icons'] *,
-				[class*='material-symbols'],
-				[class*='material-symbols'] *,
-				[class*='glyphicon'],
-				[class*='glyphicon'] *,
-				[class*='bi-'],
-				[class*='bi-'] *,
-				[class*='icon-'],
-				[class*='icon-'] *,
-				[class$='-icon'],
-				[class$='-icon'] *,
-				[class*='ph-'],
-				[class*='ph-'] *,
-				[class*='ti-'],
-				[class*='ti-'] *,
-				[class*='ri-'],
-				[class*='ri-'] *,
-				[class*='icomoon'],
-				[class*='icomoon'] *
-			)
-	) {
-	font-family: var(--opendyslexic-bold), Arial, sans-serif !important;
-	font-weight: 700;
-	line-height: 1.5;
 }

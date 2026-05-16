@@ -13,8 +13,6 @@ function getManifestLocation(browser) {
 			return 'firefox-manifest.json';
 		case 'edge':
 			return 'edge-manifest.json';
-		case 'ios':
-			return 'safari-manifest.json';
 		default:
 			return 'chrome-manifest.json';
 	}

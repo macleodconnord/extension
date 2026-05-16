@@ -48,10 +48,7 @@
 
 						<label class="flex items-center gap-2">
 							<span class="sr-only">
-								{{
-									$helperbird_i18n('toggleExtension') ||
-									'Toggle OpenDyslexic'
-								}}
+								{{ $helperbird_i18n('toggleExtension') }}
 							</span>
 							<input
 								type="checkbox"
@@ -67,8 +64,9 @@
 							class="grid grid-cols-1 max-h-48 overflow-auto gap-2"
 							role="list"
 							:aria-label="
-								$helperbird_i18n('fontOptions') ||
-								'Font options'
+								$helperbird_i18n(
+									'feature_specialized_font_options'
+								)
 							"
 						>
 							<template v-for="font in fonts" :key="font.title">

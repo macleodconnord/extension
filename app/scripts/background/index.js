@@ -2,28 +2,25 @@ import { isEmpty } from '@scripts/content/utils.js';
 import { update } from '@scripts/content/badge.js';
 
 chrome.storage.onChanged.addListener(async (changes, areaName) => {
-	if (areaName !== 'local' && areaName !== 'sync') {
+	if (areaName !== 'local') {
 		return;
 	}
 
-	const currentFont = await getStorage('font');
-	const isEnabled = await getStorage('enabled');
-
 	if (changes.enabled) {
 		update({ state: changes.enabled.newValue || false });
-		const newMode = changes.enabled.newValue;
+		const currentFont = await getStorage('font');
 		sendToAllTabs({
 			type: 'openDyslexicIsOn',
-			enabled: newMode,
+			enabled: changes.enabled.newValue,
 			font: currentFont.found ? currentFont.item : 'regular'
 		});
 	}
 
 	if (changes.font) {
-		const newFont = changes.font.newValue;
+		const isEnabled = await getStorage('enabled');
 		sendToAllTabs({
 			type: 'updateFont',
-			font: newFont,
+			font: changes.font.newValue,
 			enabled: isEnabled.found ? isEnabled.item : false
 		});
 	}
@@ -32,7 +29,15 @@ chrome.storage.onChanged.addListener(async (changes, areaName) => {
 function sendToAllTabs(message) {
 	chrome.tabs.query({}, (tabs) => {
 		tabs.forEach((tab) => {
-			chrome.tabs.sendMessage(tab.id, message).catch(() => {});
+			chrome.tabs.sendMessage(tab.id, message).catch((err) => {
+				if (
+					!err ||
+					!err.message ||
+					!err.message.includes('Receiving end does not exist')
+				) {
+					console.debug('sendMessage failed:', err && err.message);
+				}
+			});
 		});
 	});
 }
