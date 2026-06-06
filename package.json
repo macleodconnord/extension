@@ -23,7 +23,7 @@
 		"firefox": "cross-env browser=firefox webpack",
 		"clean": "rimraf ./dist ./build",
 		"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
-		"build": "pnpm run clean && pnpm run chrome && pnpm run firefox && pnpm run edge",
+		"build": "pnpm run format && pnpm run clean && pnpm run chrome && pnpm run firefox && pnpm run edge",
 		"build:chrome": "pnpm run chrome",
 		"build:firefox": "pnpm run firefox",
 		"build:edge": "pnpm run edge",
